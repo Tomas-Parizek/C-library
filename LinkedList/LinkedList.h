@@ -5,12 +5,13 @@
 #ifndef C_LIBRARY_LINKEDLIST_H
 #define C_LIBRARY_LINKEDLIST_H
 
+#include "../Types/Types.h"
 #include <stdio.h>
 #include <stdarg.h>
 
 struct Node
 {
-    int data;
+    B8 data;
     struct Node * next;
 };
 

@@ -1,7 +1,7 @@
 //
 // Created by user on 14.8.22.
 //
-#include "LinkedList/LinkedList.h"
+#include "../LinkedList/LinkedList.h"
 
 int main()
 {

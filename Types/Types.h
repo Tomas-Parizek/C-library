@@ -43,13 +43,4 @@ typedef double F8;
 typedef long double F16;
 typedef long double F10;
 
-//Union 8-bytových typů
-
-typedef union {
-    I8 i;
-    U8 u;
-    F8 d;
-    void * p;
-} B8;
-
 #endif

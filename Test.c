@@ -11,5 +11,5 @@ int main()
     struct LinkedList linkedList;
     linked_list_constructor(&linkedList, 3, &node0, &node1, &node2);
 
-    printLinkedList(linkedList);
+    print_linked_list(linkedList);
 }

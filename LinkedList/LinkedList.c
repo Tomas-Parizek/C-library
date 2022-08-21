@@ -4,7 +4,7 @@
 
 #include "LinkedList.h"
 
-void printLinkedList(struct LinkedList linkedList)
+void print_linked_list(struct LinkedList linkedList)
 {
     printf("[ ");
     for (struct Node * node = &linkedList.head; node != NULL; node = node->next)

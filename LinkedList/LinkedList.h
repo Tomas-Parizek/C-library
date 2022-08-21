@@ -18,10 +18,9 @@ struct LinkedList
 {
     struct Node head;
     struct Node * current;
-    unsigned long length;
 };
 
-void printLinkedList(struct LinkedList linkedList);
+void print_linked_list(struct LinkedList linkedList);
 void add (struct LinkedList * linkedList, struct Node * node);
 struct Node node_constructor(int data);
 void linked_list_constructor(struct LinkedList * linkedList, int length, ...);

@@ -25,5 +25,8 @@ void print_linked_list(struct LinkedList linkedList);
 void add (struct LinkedList * linkedList, struct Node * node);
 struct Node node_constructor(i64 data);
 void linked_list_constructor(struct LinkedList * linkedList, int length, ...);
+i64 get(i32 position, struct LinkedList * linkedList);
+void set (i32 position, struct LinkedList * linkedList, i64 data);
+void insert(i32 position, struct LinkedList * linkedList, struct Node * data);
 
 #endif //C_LIBRARY_LINKEDLIST_H

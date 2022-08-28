@@ -14,9 +14,7 @@ int main()
     struct LinkedList linkedList;
     linked_list_constructor(&linkedList, 3, &node0, &node1, &node2);
     add(&linkedList, &node3);
-    insert(3, &linkedList, &node4);
+    insert(0, &linkedList, &node4);
 
     print_linked_list(linkedList);
-    set(2, &linkedList, get(2, &linkedList)*2);
-    printf("%lld\n", get(2, &linkedList));
 }

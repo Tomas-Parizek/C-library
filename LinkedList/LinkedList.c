@@ -7,7 +7,7 @@
 void print_linked_list(struct LinkedList linkedList)
 {
     printf("[ ");
-    for (struct Node * node = &linkedList.head; node != NULL; node = node->next)
+    for (struct Node * node = linkedList.head.next; node != NULL; node = node->next)
         printf("%lld ", node->data);
     printf("]\n");
 }
@@ -28,10 +28,9 @@ void linked_list_constructor(struct LinkedList * linkedList, int length, ...)
 {
     va_list ap;
     va_start(ap, length);
-    linkedList->head = *va_arg(ap, struct Node *);
     linkedList->current = &linkedList->head;
 
-    for (int i = 1; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         add(linkedList, va_arg(ap, struct Node *));
     }
@@ -42,8 +41,7 @@ i64 get(i32 position, struct LinkedList * linkedList)
 {
     struct Node * node;
     int i;
-    for (node = &linkedList->head, i = 0; i < position; node = node->next, i++)
-    {}
+    for (node = linkedList->head.next, i = 0; i < position; node = node->next, i++);
     return node->data;
 }
 
@@ -51,8 +49,7 @@ void set (i32 position, struct LinkedList * linkedList, i64 data)
 {
     struct Node * node;
     int i;
-    for (node = &linkedList->head, i = 0; i < position; node = node->next, i++)
-    {}
+    for (node = linkedList->head.next, i = 0; i < position; node = node->next, i++);
     node->data = data;
 }
 
@@ -60,8 +57,7 @@ void insert(i32 position, struct LinkedList * linkedList, struct Node * data)
 {
     struct Node * node;
     int i;
-    for (node = &linkedList->head, i = 1; i < position; node = node->next, i++)
-    {}
+    for (node = &linkedList->head, i = 0; i < position; node = node->next, i++);
     data->next = node->next;
     node->next = data;
 }

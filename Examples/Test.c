@@ -17,4 +17,7 @@ int main()
     insert(0, &linkedList, &node4);
 
     print_linked_list(linkedList);
+    for (int i = 0; i < 5; i++)
+        set(i, &linkedList, 4);
+    print_linked_list(linkedList);
 }
